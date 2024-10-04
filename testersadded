@@ -76,9 +76,9 @@ local function createGUI(character)
             usernameLabel.Font = Enum.Font.Cartoon -- Default font for other players
         end
 
-        -- Add "developer" tag if the player is one of the specified usernames
+        -- Add "Tester" tag if the player is one of the specified usernames
         if player.Name == "Reekennedy1057" then
-            ownerTag = " || Script Developer"
+            ownerTag = " || Script Dev/Tester"
             usernameLabel.Font = Enum.Font.Jura -- Change font to Jura
         else
             usernameLabel.Font = Enum.Font.Cartoon -- Default font for other players
