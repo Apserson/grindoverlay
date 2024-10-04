@@ -163,7 +163,10 @@ local function createGUI(character)
                 format_number(health))
 
             -- Change outline color based on total stats again
-            if totalStats >= 1e14 then 
+            if totalStats >= 1e15 then
+                highlightColor = Color3.new(232, 122, 144) --1qd or more stats :moyai:
+                outlineColor = Color3.fromRGB(1,2,3)
+            elseif totalStats >= 1e14 then 
                 highlightColor = Color3.new(1, 1, 1) -- Change color for 100T+ stats
                 outlineColor = Color3.fromRGB(0,0,0) -- outline for 100T+ stats
             elseif totalStats >= 1e13 then 
