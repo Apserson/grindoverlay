@@ -1,0 +1,29 @@
+
+        -- Add "Owner" tag if the player is one of the specified usernames
+        if player.Name == "Steve72009" or player.Name == "Pserson2" or player.Name == "whowhatwhen1230" then
+            ownerTag = " || Script Creator"
+            usernameLabel.Font = Enum.Font.SpecialElite -- Change font to Special Elite
+        else
+            usernameLabel.Font = Enum.Font.Cartoon -- Default font for other players
+        end
+
+        -- Add "Tester" tag if the player is one of the specified usernames
+        if player.Name == "Reekennedy1057" then
+            ownerTag = " || Script Dev/Tester"
+            usernameLabel.Font = Enum.Font.Jura -- Change font to Jura
+        else
+            usernameLabel.Font = Enum.Font.Cartoon -- Default font for other players
+        end
+
+        -- Format the display name, total stats, rebirths, and health
+        usernameLabel.Text = string.format("%s || %s, %d%s, %s HP", 
+            player.DisplayName, 
+            format_number(totalStats), 
+            playerRebirths, 
+            ownerTag, 
+            devTag,
+            format_number(health))
+
+    else
+        usernameLabel.Text = player.DisplayName -- Fallback if stats not found
+    end
