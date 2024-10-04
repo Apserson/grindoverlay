@@ -68,8 +68,8 @@ local function createGUI(character)
         local health = humanoid and humanoid.Health or 0
 
         -- Add "Owner" tag if the player is one of the specified usernames
-        if player.Name == "Steve72009" or player.Name == "Pserson2" or player.Name == "whowhatwhen1230" then
-            ownerTag = " || Script Creator"
+        if player.Name == "Steve72009" or player.Name == "Pserson2" or player.Name == "whowhatwhen1230" or player.name == "Reekennedy1057 " then
+            ownerTag = " || Script Dev"
             usernameLabel.Font = Enum.Font.SpecialElite -- Change font to Special Elite
         else
             usernameLabel.Font = Enum.Font.Cartoon -- Default font for other players
